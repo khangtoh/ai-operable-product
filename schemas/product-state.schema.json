@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI-Operable Product State",
+  "type": "object",
+  "required": ["product", "scope", "as_of", "intended_outcome", "confidence"],
+  "properties": {
+    "product": {"type": "string"},
+    "scope": {"type": "string"},
+    "as_of": {"type": "string"},
+    "intended_outcome": {
+      "type": "object",
+      "properties": {
+        "expected": {"type": "string"},
+        "observed": {"type": "string"},
+        "status": {"type": "string"}
+      }
+    },
+    "journey": {"type": "object"},
+    "workflow": {"type": "object"},
+    "business_state": {"type": "object"},
+    "runtime": {"type": "object"},
+    "recovery": {"type": "object"},
+    "policy": {"type": "object"},
+    "safe_actions": {"type": "object"},
+    "learning": {"type": "object"},
+    "primitive_assessment": {"type": "object"},
+    "ai_operable_done": {"type": "object"},
+    "confidence": {
+      "type": "object",
+      "properties": {
+        "overall": {"enum": ["high", "medium", "low", "unknown"]},
+        "unresolved_questions": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
