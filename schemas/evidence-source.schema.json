@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Source",
+  "type": "object",
+  "required": ["name", "type", "can_establish"],
+  "properties": {
+    "name": {"type": "string", "minLength": 1},
+    "type": {"type": "string", "minLength": 1},
+    "can_establish": {"type": "array", "items": {"type": "string"}},
+    "freshness": {"type": "string"},
+    "identifiers": {"type": "array", "items": {"type": "string"}},
+    "authority_for": {"type": "array", "items": {"type": "string"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "access_mode": {"enum": ["read", "action", "unknown"]}
+  }
+}
