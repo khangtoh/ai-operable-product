@@ -1,0 +1,9 @@
+sources:
+  - name: ""
+    type: ""
+    can_establish: []
+    freshness: ""
+    identifiers: []
+    authority_for: []
+    limitations: []
+    access_mode: "read"
