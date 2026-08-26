@@ -1,0 +1,43 @@
+product_state:
+  product: ""
+  scope: ""
+  as_of: ""
+  intended_outcome:
+    expected: ""
+    observed: ""
+    status: ""
+  journey:
+    current_stage: ""
+    completed_stages: []
+    pending_stages: []
+    failed_or_diverged_stages: []
+    customer_visible_state: ""
+  workflow:
+    executions: []
+    current_workflow_state: ""
+    dependencies: []
+    divergence: ""
+  business_state:
+    entities: []
+    authoritative_state: ""
+    ambiguities: []
+  runtime:
+    relevant_signals: []
+    correlated_failures: []
+  recovery:
+    applicable_path: ""
+    prerequisites: []
+    verification: ""
+  policy:
+    applicable_boundaries: []
+  safe_actions:
+    available: []
+    prohibited: []
+    approval_required: []
+  learning:
+    related_incidents: []
+    known_recurring_patterns: []
+    feedback_destinations: []
+  confidence:
+    overall: "unknown"
+    unresolved_questions: []
