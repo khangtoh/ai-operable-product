@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/ai-operable-icon-512.png" alt="AI-Operable Product" width="180" />
+</p>
+
 # AI-Operable Product Skill
 
 A portable Agent Skill for reconstructing and assessing the **operating state of a business product** from enterprise evidence.
@@ -72,6 +76,8 @@ AI-OPERABLE DONE
 ai-operable-product-skill/
 ├── SKILL.md
 ├── README.md
+├── assets/
+│   └── ai-operable-icon-512.png
 ├── .claude/
 │   └── skills/
 │       └── ai-operable-product/
