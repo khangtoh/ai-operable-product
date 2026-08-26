@@ -1,0 +1,24 @@
+product:
+  name: ""
+  description: ""
+  primary_actor: ""
+  intended_outcome: ""
+  known_journey_stages: []
+
+investigation:
+  objective: ""
+  environment: "production"
+  time_scope: ""
+  entity_scope: ""
+
+evidence:
+  available_sources: []
+  known_gaps: []
+
+correlation:
+  known_identifiers: []
+  discovered_relationships: []
+
+authority:
+  mode: "diagnose"
+  notes: ""
