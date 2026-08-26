@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI-Operable Product Operating Context",
+  "type": "object",
+  "required": ["product", "investigation", "evidence", "authority"],
+  "properties": {
+    "product": {
+      "type": "object",
+      "required": ["name", "description"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "primary_actor": {"type": "string"},
+        "intended_outcome": {"type": "string"},
+        "known_journey_stages": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "investigation": {
+      "type": "object",
+      "required": ["objective"],
+      "properties": {
+        "objective": {"type": "string", "minLength": 1},
+        "environment": {"type": "string"},
+        "time_scope": {"type": "string"},
+        "entity_scope": {"type": "string"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["available_sources"],
+      "properties": {
+        "available_sources": {"type": "array", "items": {"$ref": "evidence-source.schema.json"}},
+        "known_gaps": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "correlation": {
+      "type": "object",
+      "properties": {
+        "known_identifiers": {"type": "array", "items": {"type": "string"}},
+        "discovered_relationships": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "authority": {
+      "type": "object",
+      "required": ["mode"],
+      "properties": {
+        "mode": {"enum": ["observe", "diagnose", "recommend", "human-approved-action", "autonomous-bounded-action"]},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}
