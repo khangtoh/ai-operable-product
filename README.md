@@ -78,6 +78,7 @@ AI-OPERABLE DONE
 ai-operable-product-skill/
 ├── SKILL.md
 ├── README.md
+├── CHANGELOG.md
 ├── assets/
 │   └── ai-operable-product-icon.png
 ├── .claude/
@@ -143,6 +144,21 @@ The skill separates:
 - **Actual state** — what runtime and business-state evidence says happened.
 
 This prevents a common failure mode where technical health is mistaken for product success.
+
+## Versioning
+
+The package follows [Semantic Versioning](https://semver.org/). The current version is declared in
+the `version` field of `SKILL.md`'s frontmatter (and mirrored in the `.claude/skills/` project copy),
+and every release is recorded in [`CHANGELOG.md`](CHANGELOG.md).
+
+- **MAJOR** — a breaking change to the seven primitives, the AI-OPERABLE DONE criteria, the Default
+  Output structure, or a `schemas/*.schema.json` contract.
+- **MINOR** — backward-compatible additions (new references, templates, examples, evals, optional
+  schema fields, expanded guidance).
+- **PATCH** — wording/doc fixes that don't change instructions, reasoning steps, or output contract.
+
+`scripts/validate_package.py` checks that both `SKILL.md` files declare a matching version and that
+it agrees with the latest `CHANGELOG.md` entry.
 
 ## Safety
 

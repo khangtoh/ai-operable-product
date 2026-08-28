@@ -1,6 +1,7 @@
 ---
 name: ai-operable-product
 description: Reconstruct and assess the operating state of a business product or customer journey using the seven AI-Operable Product operating primitives.
+version: 1.0.0
 ---
 
 # AI-Operable Product
@@ -21,3 +22,5 @@ When invoked:
 10. Never equate infrastructure health with business outcome success, observability with operability, an API with a Safe Action, or telemetry with a Feedback Loop.
 
 Read the repository's `references/`, `templates/`, `schemas/`, `examples/`, and `evals/` when deeper guidance is required.
+
+This file's `version` frontmatter must always match the canonical root `SKILL.md`. See `CHANGELOG.md` for release history and the versioning policy.

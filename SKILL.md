@@ -1,6 +1,7 @@
 ---
 name: ai-operable-product
 description: Reconstruct and assess the operating state of a business product or customer journey using the seven AI-Operable Product primitives. Use this skill when a user wants to understand product state, investigate a customer journey or incident, assess AI operability, identify missing operational context, map evidence sources, determine recovery or safe actions, or build an operational model from enterprise data.
+version: 1.0.0
 ---
 
 # AI-Operable Product
